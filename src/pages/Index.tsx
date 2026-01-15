@@ -98,7 +98,7 @@ const Index = () => {
             <button onClick={() => scrollToSection('contacts')} className="text-gray-700 hover:text-primary transition">
               Контакты
             </button>
-            <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-700 hover:text-primary transition">
+            <a href="https://t.me/Alexandr56oren" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-700 hover:text-primary transition">
               <Icon name="Send" size={20} />
               Telegram
             </a>
