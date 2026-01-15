@@ -219,8 +219,12 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl p-8 h-96 flex items-center justify-center">
-              <Icon name="Snowflake" size={200} className="text-primary/30" />
+            <div className="rounded-2xl overflow-hidden h-96 shadow-xl">
+              <img 
+                src="https://cdn.poehali.dev/projects/48ac3689-99fd-46ac-bf14-cb369cffa746/files/52e5f11c-8d7f-4857-98fb-b37dcfa6ba5c.jpg" 
+                alt="Специалист ремонтирует сплит-систему" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
