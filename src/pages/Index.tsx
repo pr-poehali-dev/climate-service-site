@@ -109,8 +109,16 @@ const Index = () => {
         </div>
       </nav>
 
-      <section className="pt-32 pb-20 px-4">
-        <div className="container mx-auto text-center">
+      <section className="pt-32 pb-20 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/90 to-gray-50/95 z-10"></div>
+          <img 
+            src="https://cdn.poehali.dev/projects/48ac3689-99fd-46ac-bf14-cb369cffa746/files/effb148f-7a4a-461f-a661-bf9999d27dbd.jpg" 
+            alt="Haier split system" 
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
+        <div className="container mx-auto text-center relative z-20">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">
             Профессиональный ремонт
             <span className="block text-primary">климатической техники</span>
