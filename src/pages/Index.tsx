@@ -83,7 +83,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Icon name="Snowflake" size={32} className="text-primary" />
-            <span className="text-2xl font-bold text-primary">КлиматСервис</span>
+            <span className="text-2xl font-bold text-primary">КлиматСервисОренбург</span>
           </div>
           <div className="hidden md:flex gap-6 items-center">
             <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-primary transition">
@@ -333,9 +333,7 @@ const Index = () => {
                 <Icon name="Phone" size={48} className="text-primary mx-auto mb-4" />
                 <CardTitle>Телефон</CardTitle>
                 <CardDescription className="text-lg">
-                  <a href="tel:+79991234567" className="text-primary hover:underline">
-                    +7 (999) 123-45-67
-                  </a>
+                  <a href="tel:+79991234567" className="text-primary hover:underline">+7 (3532) 55-88-85</a>
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -345,9 +343,7 @@ const Index = () => {
                 <Icon name="Mail" size={48} className="text-primary mx-auto mb-4" />
                 <CardTitle>Email</CardTitle>
                 <CardDescription className="text-lg">
-                  <a href="mailto:info@klimat-service.ru" className="text-primary hover:underline">
-                    info@klimat-service.ru
-                  </a>
+                  <a href="mailto:info@klimat-service.ru" className="text-primary hover:underline">orensec@mail.ru</a>
                 </CardDescription>
               </CardHeader>
             </Card>
