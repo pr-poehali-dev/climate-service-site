@@ -352,9 +352,7 @@ const Index = () => {
               <CardHeader>
                 <Icon name="MapPin" size={48} className="text-primary mx-auto mb-4" />
                 <CardTitle>Адрес</CardTitle>
-                <CardDescription className="text-lg">
-                  г. Москва, ул. Примерная, 10
-                </CardDescription>
+                <CardDescription className="text-lg">г. Оренбург, ул. Пограничная, 9а</CardDescription>
               </CardHeader>
             </Card>
           </div>
