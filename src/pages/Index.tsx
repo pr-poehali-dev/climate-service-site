@@ -148,9 +148,9 @@ const Index = () => {
         </div>
         <div className="container mx-auto text-center relative z-20">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 animate-fade-in leading-tight">
-            <span className="block px-2">Профессиональный</span>
-            <span className="block px-2">ремонт</span>
-            <span className="block text-primary mt-2 px-2">климатической техники</span>
+            <span className="block px-0 py-0 my-0 mx-0 text-2xl font-black">Профессиональный</span>
+            <span className="block px-2 text-2xl font-black">ремонт</span>
+            <span className="block text-primary mt-2 px-2 text-2xl font-black">климатической техники</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 md:mb-8 max-w-2xl mx-auto animate-fade-in px-4 leading-relaxed">
             Быстрая диагностика, качественный ремонт и обслуживание сплит-систем любой сложности. Гарантия на все работы.
