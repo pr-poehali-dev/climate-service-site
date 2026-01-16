@@ -107,10 +107,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Icon name="Snowflake" size={32} className="text-primary" />
-            <span className="text-2xl font-bold text-primary">КлиматСервисОренбург</span>
+            <Icon name="Snowflake" size={24} className="text-primary md:w-8 md:h-8" />
+            <span className="text-lg md:text-2xl font-bold text-primary">КлиматСервисОренбург</span>
           </div>
           <div className="hidden md:flex gap-6 items-center">
             <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-primary transition">
@@ -130,13 +130,14 @@ const Index = () => {
               Telegram
             </a>
           </div>
-          <Button onClick={() => scrollToSection('booking')}>
-            Оставить заявку
+          <Button onClick={() => scrollToSection('booking')} size="sm" className="md:h-10">
+            <span className="hidden sm:inline">Оставить заявку</span>
+            <span className="sm:hidden">Заявка</span>
           </Button>
         </div>
       </nav>
 
-      <section className="pt-32 pb-20 px-4 relative overflow-hidden">
+      <section className="pt-24 md:pt-32 pb-12 md:pb-20 px-4 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/90 to-gray-50/95 z-10"></div>
           <img 
@@ -146,25 +147,25 @@ const Index = () => {
           />
         </div>
         <div className="container mx-auto text-center relative z-20">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 animate-fade-in px-2">
             Профессиональный ремонт
             <span className="block text-primary">климатической техники</span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-in">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 md:mb-8 max-w-2xl mx-auto animate-fade-in px-4">
             Быстрая диагностика, качественный ремонт и обслуживание сплит-систем любой сложности. Гарантия на все работы.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center animate-slide-up">
-            <Button size="lg" onClick={() => scrollToSection('booking')} className="text-lg">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-slide-up px-4">
+            <Button size="default" onClick={() => scrollToSection('booking')} className="text-base sm:text-lg w-full sm:w-auto">
               <Icon name="Calendar" size={20} className="mr-2" />
               Записаться онлайн
             </Button>
-            <Button size="lg" variant="outline" onClick={() => scrollToSection('services')} className="text-lg">
+            <Button size="default" variant="outline" onClick={() => scrollToSection('services')} className="text-base sm:text-lg w-full sm:w-auto">
               <Icon name="List" size={20} className="mr-2" />
               Наши услуги
             </Button>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-16 max-w-4xl mx-auto px-2">
             <Card className="border-2 hover:border-primary transition-all hover:shadow-lg">
               <CardHeader>
                 <Icon name="Clock" size={48} className="text-primary mx-auto mb-2" />
@@ -190,10 +191,10 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="services" className="py-20 px-4 bg-white">
+      <section id="services" className="py-12 md:py-20 px-4 bg-white">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">Наши услуги</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 md:mb-4 text-gray-900">Наши услуги</h2>
+          <p className="text-sm md:text-base text-center text-gray-600 mb-8 md:mb-12 max-w-2xl mx-auto px-4">
             Предоставляем полный спектр услуг по ремонту и обслуживанию климатической техники
           </p>
           
@@ -216,37 +217,37 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="about" className="py-20 px-4">
+      <section id="about" className="py-12 md:py-20 px-4">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6 text-gray-900">О компании</h2>
-              <p className="text-gray-600 mb-4 text-lg leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-gray-900">О компании</h2>
+              <p className="text-gray-600 mb-3 md:mb-4 text-base md:text-lg leading-relaxed">
                 Мы — команда сертифицированных специалистов с опытом работы более 10 лет. Наша миссия — обеспечить комфортный микроклимат в каждом доме и офисе.
               </p>
-              <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+              <p className="text-gray-600 mb-4 md:mb-6 text-base md:text-lg leading-relaxed">
                 Используем только оригинальные запчасти и профессиональное оборудование. Работаем с техникой всех брендов: Daikin, Mitsubishi, LG, Samsung, Gree и другими.
               </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="flex items-center gap-3">
-                  <Icon name="CheckCircle2" size={24} className="text-primary" />
-                  <span className="text-gray-700">Сертифицированные мастера</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+                <div className="flex items-center gap-2 md:gap-3">
+                  <Icon name="CheckCircle2" size={20} className="text-primary flex-shrink-0" />
+                  <span className="text-sm md:text-base text-gray-700">Сертифицированные мастера</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Icon name="CheckCircle2" size={24} className="text-primary" />
-                  <span className="text-gray-700">Оригинальные запчасти</span>
+                <div className="flex items-center gap-2 md:gap-3">
+                  <Icon name="CheckCircle2" size={20} className="text-primary flex-shrink-0" />
+                  <span className="text-sm md:text-base text-gray-700">Оригинальные запчасти</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Icon name="CheckCircle2" size={24} className="text-primary" />
-                  <span className="text-gray-700">Работаем 24/7</span>
+                <div className="flex items-center gap-2 md:gap-3">
+                  <Icon name="CheckCircle2" size={20} className="text-primary flex-shrink-0" />
+                  <span className="text-sm md:text-base text-gray-700">Работаем 24/7</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Icon name="CheckCircle2" size={24} className="text-primary" />
-                  <span className="text-gray-700">Прозрачные цены</span>
+                <div className="flex items-center gap-2 md:gap-3">
+                  <Icon name="CheckCircle2" size={20} className="text-primary flex-shrink-0" />
+                  <span className="text-sm md:text-base text-gray-700">Прозрачные цены</span>
                 </div>
               </div>
             </div>
-            <div className="rounded-2xl overflow-hidden h-96 shadow-xl">
+            <div className="rounded-2xl overflow-hidden h-64 md:h-96 shadow-xl">
               <img 
                 src="https://cdn.poehali.dev/projects/48ac3689-99fd-46ac-bf14-cb369cffa746/files/05e632a8-0619-4ddc-8dae-df2eb2925976.jpg" 
                 alt="Специалист ремонтирует сплит-систему" 
@@ -257,10 +258,10 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="reviews" className="py-20 px-4 bg-white">
+      <section id="reviews" className="py-12 md:py-20 px-4 bg-white">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">Отзывы клиентов</h2>
-          <p className="text-center text-gray-600 mb-12">Что говорят о нас наши клиенты</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 md:mb-4 text-gray-900">Отзывы клиентов</h2>
+          <p className="text-sm md:text-base text-center text-gray-600 mb-8 md:mb-12 px-4">Что говорят о нас наши клиенты</p>
           
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {reviews.map((review, index) => (
@@ -285,12 +286,12 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="booking" className="py-20 px-4">
+      <section id="booking" className="py-12 md:py-20 px-4">
         <div className="container mx-auto max-w-2xl">
           <Card className="border-2 shadow-xl">
             <CardHeader className="text-center">
-              <CardTitle className="text-3xl mb-2">Онлайн-запись на ремонт</CardTitle>
-              <CardDescription className="text-base">
+              <CardTitle className="text-2xl md:text-3xl mb-2">Онлайн-запись на ремонт</CardTitle>
+              <CardDescription className="text-sm md:text-base">
                 Оставьте заявку, и мы свяжемся с вами в течение 15 минут
               </CardDescription>
             </CardHeader>
@@ -340,7 +341,7 @@ const Index = () => {
                   />
                 </div>
                 
-                <Button type="submit" className="w-full text-lg h-12">
+                <Button type="submit" className="w-full text-base md:text-lg h-11 md:h-12">
                   <Icon name="Send" size={20} className="mr-2" />
                   Отправить заявку
                 </Button>
@@ -350,16 +351,16 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-4 bg-white">
+      <section id="contacts" className="py-12 md:py-20 px-4 bg-white">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Контакты</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-gray-900">Контакты</h2>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
-                <Icon name="Phone" size={48} className="text-primary mx-auto mb-4" />
-                <CardTitle>Телефон</CardTitle>
-                <CardDescription className="text-lg">
+                <Icon name="Phone" size={40} className="text-primary mx-auto mb-3 md:mb-4 md:w-12 md:h-12" />
+                <CardTitle className="text-lg md:text-xl">Телефон</CardTitle>
+                <CardDescription className="text-base md:text-lg">
                   <a href="tel:+79991234567" className="text-primary hover:underline">+7 (3532) 55-88-85</a>
                 </CardDescription>
               </CardHeader>
@@ -367,9 +368,9 @@ const Index = () => {
             
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
-                <Icon name="Mail" size={48} className="text-primary mx-auto mb-4" />
-                <CardTitle>Email</CardTitle>
-                <CardDescription className="text-lg">
+                <Icon name="Mail" size={40} className="text-primary mx-auto mb-3 md:mb-4 md:w-12 md:h-12" />
+                <CardTitle className="text-lg md:text-xl">Email</CardTitle>
+                <CardDescription className="text-base md:text-lg">
                   <a href="mailto:info@klimat-service.ru" className="text-primary hover:underline">orensec@mail.ru</a>
                 </CardDescription>
               </CardHeader>
@@ -377,22 +378,22 @@ const Index = () => {
             
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
-                <Icon name="MapPin" size={48} className="text-primary mx-auto mb-4" />
-                <CardTitle>Адрес</CardTitle>
-                <CardDescription className="text-lg">г. Оренбург, ул. Пограничная, 9а</CardDescription>
+                <Icon name="MapPin" size={40} className="text-primary mx-auto mb-3 md:mb-4 md:w-12 md:h-12" />
+                <CardTitle className="text-lg md:text-xl">Адрес</CardTitle>
+                <CardDescription className="text-base md:text-lg">г. Оренбург, ул. Пограничная, 9а</CardDescription>
               </CardHeader>
             </Card>
           </div>
         </div>
       </section>
 
-      <footer className="bg-gray-900 text-white py-12 px-4">
+      <footer className="bg-gray-900 text-white py-8 md:py-12 px-4">
         <div className="container mx-auto text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Icon name="Snowflake" size={32} className="text-primary" />
-            <span className="text-2xl font-bold">КлиматСервис</span>
+          <div className="flex items-center justify-center gap-2 mb-3 md:mb-4">
+            <Icon name="Snowflake" size={24} className="text-primary md:w-8 md:h-8" />
+            <span className="text-xl md:text-2xl font-bold">КлиматСервис</span>
           </div>
-          <p className="text-gray-400 mb-4">
+          <p className="text-sm md:text-base text-gray-400 mb-3 md:mb-4 px-4">
             Профессиональный ремонт и обслуживание климатической техники
           </p>
           <p className="text-gray-500 text-sm">
