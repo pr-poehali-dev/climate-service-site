@@ -110,7 +110,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Icon name="Snowflake" size={24} className="text-primary md:w-8 md:h-8" />
-            <span className="text-lg md:text-2xl font-bold text-primary">КлиматСервисОренбург</span>
+            <span className="md:text-2xl font-bold text-primary text-base">КлиматСервисОренбург</span>
           </div>
           <div className="hidden md:flex gap-6 items-center">
             <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-primary transition">
@@ -146,8 +146,8 @@ const Index = () => {
             className="w-full h-full object-cover opacity-20"
           />
         </div>
-        <div className="container mx-auto text-center relative z-20">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 animate-fade-in px-2 leading-tight">
+        <div className="container mx-auto text-center relative z-20 px-0 rounded-xl">
+          <h1 className="sm:text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-4 md:mb-6 animate-fade-in px-2 leading-tight text-2xl font-black">
             Профессиональный ремонт
             <span className="block text-primary mt-2">климатической техники</span>
           </h1>
