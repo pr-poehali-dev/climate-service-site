@@ -64,13 +64,40 @@ const Index = () => {
     }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: 'Заявка принята!',
-      description: 'Мы свяжемся с вами в течение 15 минут',
-    });
-    setFormData({ name: '', phone: '', address: '', message: '' });
+    
+    try {
+      const response = await fetch('https://functions.poehali.dev/363ec0b6-c7b3-45ff-bd65-86418b1e3b98', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        toast({
+          title: 'Заявка принята!',
+          description: 'Мы свяжемся с вами в течение 15 минут',
+        });
+        setFormData({ name: '', phone: '', address: '', message: '' });
+      } else {
+        toast({
+          title: 'Ошибка',
+          description: 'Не удалось отправить заявку. Попробуйте позже.',
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: 'Ошибка',
+        description: 'Не удалось отправить заявку. Попробуйте позже.',
+        variant: 'destructive',
+      });
+    }
   };
 
   const scrollToSection = (id: string) => {

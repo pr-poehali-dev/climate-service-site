@@ -1,0 +1,20 @@
+{
+  "tests": [
+    {
+      "name": "Test send telegram notification",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Иван Тестовый",
+        "phone": "+79123456789",
+        "address": "ул. Тестовая, д. 1",
+        "message": "Нужен ремонт кондиционера"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
